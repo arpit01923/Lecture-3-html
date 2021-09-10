@@ -27,5 +27,50 @@
         <h1 class="hero-heading">My Blogs<span class="heading-inverter">
             <a href="https://neog.camp/qualifier/nine-point">web developer</a></span></h1>
     </header>
+    <p>
+        
+SHARE
+SUBSCRIBE
+Home
+All articles
+User preference media features client hints headers
+The Sec-CH-Prefers-Color-Scheme client hint header allows sites to obtain the user's color scheme preferences optionally at request time, allowing servers to inline the right CSS and therefore avoid a flash of incorrect color theme.
+
+Aug 2, 2021 • Updated Aug 3, 2021
+Thomas Steiner
+Thomas Steiner
+Twitter
+GitHub
+Glitch
+Blog
+François Beaufort
+François Beaufort
+GitHub
+CSS media queries, and specifically user preference media features like prefers-color-scheme or prefers-reduced-motion, have a potentially significant impact on the amount of CSS that needs to be delivered by a page, and on the experience the user is going to have when the page loads.
+
+Focusing on prefers-color-scheme—but highlighting that the reasoning applies to other user preference media features as well—it is a best practice to not load CSS for the particular non-matching color scheme in the critical rendering path, and instead to initially only load the currently relevant CSS. One way of doing so is via <link media>.
+
+However, high-traffic sites like Google Search that wish to honor user preference media features like prefers-color-scheme and that inline CSS for performance reasons, need to know about the preferred color scheme (or other user preference media features respectively) ideally at request time, so that the initial HTML payload already has the right CSS inlined.
+
+Additionally, and specifically for prefers-color-scheme, sites by all means want to avoid a flash of inaccurate color theme.
+
+The Sec-CH-Prefers-Color-Scheme client hint header is the first of a series of user preference media features client hints headers that aims to solve this issue.
+
+Background on client hints #
+HTTP Client Hints defines an Accept-CH response header that servers can use to advertise their use of request headers for proactive content negotiation, colloquially referred to as client hints. The User Preference Media Features Client Hints Headers proposal defines a set of client hints aimed at conveying user preference media features. These client hints are named after the corresponding user preference media feature that they report on. For example, the currently preferred color scheme as per prefers-color-scheme is reported via the aptly named Sec-CH-Prefers-Color-Scheme client hint.
+
+Background on critical client hints #
+The client hints proposed in User Preference Media Features Client Hints Headers will presumably most commonly be used as Critical Client Hints. Critical Client Hints are Client Hints which meaningfully change the resulting resource. Such a resource should be fetched consistently across page loads (including the initial page load) to avoid jarring user-visible switches.
+
+Client hint syntax #
+User preference media features consist of a name (like prefers-reduced-motion) and allowed values (like no-preference or reduce. Each client hint header field is represented as Structured Headers for HTTP object containing an item whose value is a string. For example, to convey that the user prefers a dark theme and reduced motion, the client hints look like in the example below.
+
+
+GET / HTTP/2
+Host: example.com
+Sec-CH-Prefers-Color-Scheme: "dark"
+Sec-CH-Prefers-Reduced-Motion: "reduce"
+The CSS equivalent of the information conveyed in the above client hints is @media (prefers-color-scheme: dark) {} and @media (prefers-reduced-motion: reduce) {} respectively.
+    </p>
 </body>
 </html>
