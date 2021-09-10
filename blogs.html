@@ -25,27 +25,9 @@
     <header class="hero">
         <img class="hero-img" src="images/heroimage.svg">
         <h1 class="hero-heading">My Blogs<span class="heading-inverter">
-            <a href="https://neog.camp/qualifier/nine-point">web developer</a></span></h1>
+            <a href="">web developer</a></span></h1>
     </header>
     <p>
-        
-SHARE
-SUBSCRIBE
-Home
-All articles
-User preference media features client hints headers
-The Sec-CH-Prefers-Color-Scheme client hint header allows sites to obtain the user's color scheme preferences optionally at request time, allowing servers to inline the right CSS and therefore avoid a flash of incorrect color theme.
-
-Aug 2, 2021 • Updated Aug 3, 2021
-Thomas Steiner
-Thomas Steiner
-Twitter
-GitHub
-Glitch
-Blog
-François Beaufort
-François Beaufort
-GitHub
 CSS media queries, and specifically user preference media features like prefers-color-scheme or prefers-reduced-motion, have a potentially significant impact on the amount of CSS that needs to be delivered by a page, and on the experience the user is going to have when the page loads.
 
 Focusing on prefers-color-scheme—but highlighting that the reasoning applies to other user preference media features as well—it is a best practice to not load CSS for the particular non-matching color scheme in the critical rendering path, and instead to initially only load the currently relevant CSS. One way of doing so is via <link media>.
@@ -64,13 +46,6 @@ The client hints proposed in User Preference Media Features Client Hints Headers
 
 Client hint syntax #
 User preference media features consist of a name (like prefers-reduced-motion) and allowed values (like no-preference or reduce. Each client hint header field is represented as Structured Headers for HTTP object containing an item whose value is a string. For example, to convey that the user prefers a dark theme and reduced motion, the client hints look like in the example below.
-
-
-GET / HTTP/2
-Host: example.com
-Sec-CH-Prefers-Color-Scheme: "dark"
-Sec-CH-Prefers-Reduced-Motion: "reduce"
-The CSS equivalent of the information conveyed in the above client hints is @media (prefers-color-scheme: dark) {} and @media (prefers-reduced-motion: reduce) {} respectively.
-    </p>
+</p>
 </body>
 </html>
