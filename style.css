@@ -9,6 +9,9 @@ body{
     --secondary-color: #9CA3AF;
     --off-white: #D1D5DB;
 }
+h1{
+    text-align: center;
+}
 hr{
     margin: 2rem 0rem;
 }
