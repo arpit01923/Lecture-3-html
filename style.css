@@ -122,3 +122,11 @@ p{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+#para{
+    margin: auto;
+    width: 50%;
+}
+#para1{
+    margin: auto;
+    width: 50%;
+}
