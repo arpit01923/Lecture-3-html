@@ -122,11 +122,16 @@ p{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-#para{
+#para1,#para{
     margin: auto;
     width: 50%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
-#para1{
-    margin: auto;
-    width: 50%;
+#btn1,#btn2{
+    margin-left: 20rem;
+}
+#span1,#span2{
+    color: var(--primary-color);
+    font-size: 15px;
 }
