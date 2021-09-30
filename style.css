@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+html{
+    font-size: 62.5%;
+}
 body{
     font-family: 'Ubuntu', sans-serif;
     margin: 0px;
@@ -20,7 +23,7 @@ hr{
      padding: 0rem 1rem;
  }
  .container-center{
-     max-width: 600px;
+     max-width: 60rem;
      margin: auto;
  }
 
@@ -40,7 +43,7 @@ hr{
  .link-secondary{
      color: var(--primary-color);
      border-radius: 0.5rem;
-     border: 1px solid var(--primary-color);
+     border: .1rem solid var(--primary-color);
  }
  /* link into bem naming convention for css */
  /* lists */
@@ -76,7 +79,7 @@ hr{
      padding: 2rem;
  }
 .hero .hero-img{
-    max-width: 350px;
+    max-width: 35rem;
     display: block;
     margin: auto;
 }
@@ -113,14 +116,14 @@ hr{
     color: white;
 }
 .footer .ul{
-    padding-inline-start: 0px;
+    padding-inline-start: 0rem;
 }
 p{
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    margin-inline-start: 0rem;
+    margin-inline-end: 0rem;
 }
 #para1,#para{
     margin: auto;
@@ -133,5 +136,10 @@ p{
 }
 #span1,#span2{
     color: var(--primary-color);
-    font-size: 15px;
+    font-size: 1.5rem;
+}
+@media(max-width:998px){
+    html{
+        font-size: 55%;
+    }
 }
