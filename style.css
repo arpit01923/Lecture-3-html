@@ -12,9 +12,6 @@ body{
     --secondary-color: #9CA3AF;
     --off-white: #D1D5DB;
 }
-h1{
-    text-align: center;
-}
 hr{
     margin: 2rem 0rem;
 }
@@ -31,6 +28,7 @@ hr{
  .link{
      box-sizing: border-box;
      text-decoration: none;
+     font-size: medium;
      padding: 0.5rem 1rem;
      margin-top: 1rem;
      margin-bottom: 1rem;
@@ -99,6 +97,10 @@ hr{
 }
 .section h1{
     text-align: center;
+    font-size: 2.5rem;
+}
+.section p{
+    font-size: 2rem;
 }
 .ow{
     background-color: var(--off-white);
@@ -106,7 +108,7 @@ hr{
 /* footer */
 .footer .footer-header{
     font-weight: bold;
-    font-size: large;
+    font-size: 3rem;
 }
 .footer{
     background-color: var(--primary-color);
@@ -116,6 +118,7 @@ hr{
 }
 .footer .link{
     color: white;
+    font-size: 2rem;
 }
 .footer .ul{
     padding-inline-start: 0rem;
