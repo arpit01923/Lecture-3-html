@@ -14,9 +14,16 @@ body{
 }
 h1{
     font-size: x-large;
+    text-align: center;
+}
+a{
+    text-align: center;
 }
 hr{
     margin: 2rem 0rem;
+}
+#text {
+    text-align: center;
 }
  /* container */
  .container{
@@ -26,6 +33,10 @@ hr{
      max-width: 100rem;
      margin: auto;
  }
+ p{
+     text-align: center;
+ }
+
 
  /* links */
  .link{
@@ -48,6 +59,7 @@ hr{
      border: .1rem solid var(--primary-color);
      font-size: medium;
  }
+
  /* link into bem naming convention for css */
  /* lists */
  .list-non-bullets{
@@ -68,6 +80,7 @@ hr{
  .navigation .nav-brand{
      font-weight: bold;
      font-size: 3.2rem;
+     text-align: center;
  }
  .navigation .nav-pills{
      text-align: right;
@@ -150,9 +163,7 @@ p{
     color: var(--primary-color);
     font-size: 1.5rem;
 }
-p div{
-    font-size: 2px;
-}
+
 @media(max-width:998px){
     html{
         font-size: 55%;
